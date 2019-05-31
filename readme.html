@@ -1,0 +1,32 @@
+<html>
+<p>The HSPICE code for the paper:
+</p>
+<p>Massobrio G, Martinoia S, Massobrio P (2018)
+Equivalent Circuit of the Neuro-Electronic Junction for Signal
+Recordings From Planar and Engulfed Micro-Nano-Electrodes.
+IEEE Trans Biomed Circuits Syst 12:3-12
+<a href="http://dx.doi.org/10.1109/TBCAS.2017.2749451">http://dx.doi.org/10.1109/TBCAS.2017.2749451</a>
+</p>
+<p>is in the file Listing_TBCAS.sp<br/>
+This file was contributed by Paolo Massobrio.
+</p>
+Note from the ModelDB Administrator:<br/>
+Although the file was developed with HSPICE it was found to also run under the
+free ngspice available from sourceforge for all major platforms (linux/unix, mac, mswin):<p/>
+<a href="http://ngspice.sourceforge.net/docs.html">http://ngspice.sourceforge.net/docs.html</a>
+<p/>You can run the default simulation with a command like (after the sourceforge pkg binary for the mac was installed):<p/>
+
+ /Applications/ngspice/bin/ngspice -a -r output1.dat Listing_TBCAS.sp 
+<p/>
+And then at the spice command prompt type the following:<p/>
+...<br/>
+ngspice 1 -> plot -v(840)<br/>
+ngspice 2 -> plot -v(940)<br/>
+ngspice 3 -><br/>
+<p/>
+(I found the minus sign provides the same orientation as the solid black and red traces in figure 2 in the paper.  The mV units labeled in the graphs below are apparently a typo because if microVolts instead, the traces match the paper.
+<p/>
+<img src="./screenshot1.png"><p/>
+<img src="./screenshot2.png"><p/>
+    
+</html>
